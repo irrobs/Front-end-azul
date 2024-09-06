@@ -1,5 +1,8 @@
 :root {
-  --color: #fff;
+  --color-font: #fafafa;
+  --color-primary: #0ea5e9;
+  --color-primary-shadow: #082f49;
+  --color-secondary: #22c55e;
 }
 
 *,
@@ -15,8 +18,8 @@ html {
 }
 
 body {
-  height: 100dvh;
   overflow: hidden;
+  color: var(--color-font);
 }
 
 button {

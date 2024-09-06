@@ -1,0 +1,9 @@
+aside {
+  background-color: var(--color-primary-shadow);
+  opacity: 0.9;
+  position: absolute;
+  height: calc(100dvh - 5rem);
+  width: 20rem;
+  top: 5rem;
+  right: 0;
+}
