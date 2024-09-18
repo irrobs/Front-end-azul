@@ -1,0 +1,266 @@
+.titulo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+  margin-top: 80px;
+}
+
+#rodar_reciclagem {
+  animation: rotate 10s linear infinite;
+}
+
+.corpo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+h1 {
+  color: var(--cor-branca);
+  padding-left: 10px;
+  font-weight: 900;
+  font-size: 55px;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 30px;
+  color: var(--cor-branca);
+}
+
+.desc {
+  margin-top: 10px;
+  text-align: center;
+  font-weight: 300;
+  font-size: 25px;
+  color: var(--cor-branca);
+}
+.png {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  background: #072945;
+  width: 60%;
+  padding: 40px;
+  margin-top: 20px;
+  border-radius: 20px;
+  box-shadow: 1px 1px 5px var(--cor-preta);
+}
+.box_imagens {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20%;
+}
+.box_imagens img {
+  height: 25vw;
+  object-fit: cover;
+  width: 25vw;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  opacity: 0.9;
+}
+
+.imagens:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.5);
+  opacity: 1;
+}
+
+#scroll {
+  display: flex;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  animation: jumping 2s linear infinite;
+  cursor: pointer;
+}
+
+.tipos_embalagem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+}
+
+.box_icones {
+  background: #072945;
+  border-radius: 20px;
+  width: 100%;
+  padding: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: 1px 1px 5px var(--cor-preta);
+}
+.icones {
+  flex: 1 1 25%;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  opacity: 0.8;
+}
+
+.icones:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+@keyframes jumping {
+  from {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.filter-white {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(100deg)
+    brightness(118%) contrast(100%);
+}
+
+.tiposReciclagem.open {
+  width: 100%;
+  position: relative;
+  top: 100px;
+}
+
+.voltar {
+  width: 10%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--cor-branca);
+  font-size: 30px;
+  font-weight: 900;
+  cursor: pointer;
+}
+.cabecalho {
+  display: flex;
+}
+.cabecalho .titulo {
+  margin-top: 0px;
+  width: 100%;
+}
+
+.nome {
+  font-weight: 600;
+  font-size: 30px;
+  color: var(--cor-branca);
+}
+
+.explicação {
+  padding: 20px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 25px;
+  text-align: center;
+  color: var(--cor-branca);
+}
+
+.parte_inferior {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.box_ilustrativa {
+  width: 60%;
+  margin-top: 20px;
+  padding: 40px;
+  background: var(--cor-azul);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 15px;
+  box-shadow: 1px 1px 5px var(--cor-preta);
+}
+.tipo_lixo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+.descrição {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.local_descarte {
+  text-align: center;
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--cor-branca);
+}
+@media screen and (max-width: 900px) {
+  h1 {
+    font-size: 33px;
+  }
+  #rodar_reciclagem {
+    max-width: 35px;
+  }
+  h2 {
+    font-size: 23px;
+  }
+  .desc {
+    font-size: 20px;
+  }
+  .box_imagens img {
+    width: 25vw;
+    height: 40vw;
+  }
+  #scroll {
+    margin-bottom: 110px;
+  }
+  .icones {
+    width: 100px;
+  }
+  .cabecalho {
+    height: 30vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .cabecalho h1 {
+    font-size: 30px;
+  }
+  .voltar {
+    position: relative;
+    flex-direction: row-reverse;
+    width: 30%;
+  }
+  .nome {
+    text-align: center;
+  }
+  .box_ilustrativa {
+    flex-direction: column-reverse;
+    width: 70%;
+  }
+  .descrição {
+    width: 120%;
+    margin-bottom: 30px;
+  }
+}
