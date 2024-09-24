@@ -1,0 +1,42 @@
+header {
+  display: flex;
+  background: var(--cor-azul);
+  color: var(--cor-branca);
+  grid-row: 1;
+  height: 8rem;
+  align-items: center;
+  font-weight: 900;
+  font-size: 30px;
+  text-align: center;
+  justify-content: space-between;
+  box-shadow: 1px 3px 5px var(--cor-preta);
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  padding: 0 1rem;
+}
+
+.divnome {
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.nome {
+  padding-left: 15px;
+}
+
+.filter-white {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(100deg)
+    brightness(118%) contrast(100%);
+}
+
+.link-aprenda {
+  background-color: var(--color-secondary);
+  color: var(--color-font);
+  border-radius: 20px;
+  padding: 0.5rem 2rem;
+  font-weight: normal;
+  margin-left: auto;
+  margin-right: 3rem;
+}
