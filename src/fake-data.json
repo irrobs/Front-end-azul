@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Ferro Velho",
+    "distance": 5000,
+    "rating": 4
+  },
+  {
+    "name": "Coleta Seletiva",
+    "distance": 3000,
+    "rating": 5
+  },
+  {
+    "name": "Coleta de pilhas",
+    "distance": 1200,
+    "rating": 3.2
+  },
+  {
+    "name": "Lixão",
+    "distance": 2000,
+    "rating": 4.5
+  },
+  {
+    "name": "Coleta de óleo",
+    "distance": 7000,
+    "rating": 2.5
+  }
+]
