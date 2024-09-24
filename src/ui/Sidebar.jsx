@@ -39,9 +39,8 @@ export default function Sidebar({ barraLateral, mostrarSidebar }) {
       />
       <ul>
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/">Buscador de Decarte</Link>
         </li>
-        <li>Buscador de Decarte</li>
         <li onClick={() => mostrarSubMenu("about")}>
           Aprenda a Reciclar
           {subMenu === "about" && (
@@ -98,7 +97,9 @@ export default function Sidebar({ barraLateral, mostrarSidebar }) {
             </ul>
           )}
         </li>
-        <li>Sobre</li>
+        <li>
+          <Link to="/about">Sobre</Link>
+        </li>
       </ul>
     </aside>
   );

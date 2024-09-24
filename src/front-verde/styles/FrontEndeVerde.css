@@ -138,7 +138,10 @@ h2 {
 .tiposReciclagem.open {
   width: 100%;
   position: relative;
-  top: 100px;
+  top: 8rem;
+  height: calc(100dvh - 8rem);
+  padding: 1rem;
+  background-color: var(--cor-verde1);
 }
 
 .voltar {
@@ -263,4 +266,9 @@ h2 {
     width: 120%;
     margin-bottom: 30px;
   }
+}
+
+/* muda cor do bakcground no front end verde */
+.corpo {
+  background-color: var(--cor-verde1);
 }

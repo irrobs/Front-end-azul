@@ -16,12 +16,14 @@ export default function Header() {
 
   return (
     <header>
-      <div className="divnome">
+      <Link to="/" className="divnome">
         <img style={{ width: "50px" }} src={icon_site} />
         <div className="nome">Nome do Site</div>
-      </div>
+      </Link>
 
-      <Link to="/aprenda">Aprenda a Reciclar</Link>
+      <Link to="/aprenda" className="link-aprenda">
+        Aprenda a Reciclar
+      </Link>
 
       <div>
         <img

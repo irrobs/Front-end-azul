@@ -1,9 +1,9 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import AppLayout from "./ui/AppLayout";
-import Home from "./pages/Home";
-import Info from "./pages/Info";
-import About from "./pages/About";
-import FrontEndVerde from "./pages/FrontEndVerde";
+import Home from "./front-azul/pages/Home";
+import Info from "./front-azul/pages/Info";
+import About from "./front-azul/pages/About";
+import FrontEndVerde from "./front-verde/pages/FrontEndVerde";
 
 export default function App() {
   return (

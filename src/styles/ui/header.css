@@ -13,6 +13,7 @@ header {
   width: 100%;
   position: fixed;
   z-index: 1;
+  padding: 0 1rem;
 }
 
 .divnome {
@@ -28,4 +29,14 @@ header {
 .filter-white {
   filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(100deg)
     brightness(118%) contrast(100%);
+}
+
+.link-aprenda {
+  background-color: var(--color-secondary);
+  color: var(--color-font);
+  border-radius: 20px;
+  padding: 0.5rem 2rem;
+  font-weight: normal;
+  margin-left: auto;
+  margin-right: 3rem;
 }

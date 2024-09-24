@@ -26,9 +26,16 @@
 .barralateral ul li {
   padding: 15px;
   border-bottom: 1px solid var(--cor-branca);
+
+  cursor: pointer;
 }
 
-.barralateral ul li:hover {
+.barralateral ul li a {
+  color: var(--color-font);
+}
+
+.barralateral ul li:hover,
+.barralateral ul li a:hover {
   background-color: var(--cor-azul2);
 }
 

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../styles/pages/FrontEndeVerde.css";
+import "../styles/FrontEndeVerde.css";
 
 import salgadinho from "/assets/Salgadinho.png";
 import garrafa from "/assets/Garrafa.png";
