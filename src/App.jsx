@@ -4,6 +4,7 @@ import Home from "./front-azul/home/Home";
 import Info from "./front-azul/info/Info";
 import About from "./front-azul/about/About";
 import FrontEndVerde from "./front-verde/pages/FrontEndVerde";
+/* teste */
 
 export default function App() {
   return (
