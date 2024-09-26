@@ -2,9 +2,14 @@
   height: 100dvh;
   display: grid;
   grid-template-rows: 8rem 1fr;
-  background-color: var(--color-primary);
+  background: linear-gradient(
+    to right,
+    var(--color-primary-shadow),
+    var(--color-primary)
+  );
 }
 
 main {
   height: 100%;
+  grid-row: 2;
 }

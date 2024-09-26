@@ -3,7 +3,7 @@
 :root {
   --color-font: #fafafa;
   --color-primary: #0ea5e9;
-  --color-primary-shadow: #082f49;
+  --color-primary-shadow: #075985;
   --color-secondary: #22c55e;
   --cor-azul: #072945;
   --cor-azul2: #12456e;
@@ -37,6 +37,10 @@ body {
   font-family: "Roboto", sans-serif;
   overflow-x: hidden;
   color: var(--color-font);
+  /*background-image: url(''); //Colocar o Background aqui? 
+    background-size: 100%;
+    background-position: right;
+    background-repeat: no-repeat;*/
 }
 
 button {
