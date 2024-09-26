@@ -1,44 +1,26 @@
+.conteiner {
+  padding-top: 40px;
+  text-align: center;
+  /* background-image: url("");
+  background-size: 20%;
+  background-position: right bottom;
+  background-repeat: no-repeat; */
+}
+.conteiner h2 {
+  color: white;
+  margin-bottom: 40px;
+  font-size: 40px;
+  display: flex;
+  flex-direction: column;
+}
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #156CAC;
-    height: 100%;
-    width: 100%;
-    /*background-image: url(''); //Colocar o Background aqui? 
-    background-size: 100%;
-    background-position: right;
-    background-repeat: no-repeat;*/
-    margin: 0;
-    padding: 0;
-  }
-  
-  .conteiner {
-    padding-top: 0px;
-    text-align: center;
-    background-image: url(''); /*Onde colocar a imagem do circuito, canto inferior direito*/
-    background-size: 20%;
-    background-position: right bottom;
-    background-repeat: no-repeat;
-    
-  }
-  .conteiner h2 {
-    color: white;
-    margin-bottom: 40px;
-    font-size: 40px;
-    display: flex;
-    flex-direction: column;
-    
-  }
-  
-
-  .section {
-    font-size: 40px;
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    width: 120px;
-    color: white;
-    padding: 40px;
-    padding-left: 80px;
-    text-align: start;
-  }
+.section {
+  font-size: 40px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding: 40px;
+  padding-left: 80px;
+  text-align: start;
+}

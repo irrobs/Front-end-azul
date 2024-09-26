@@ -3,7 +3,6 @@
   align-items: center;
   justify-content: center;
   padding-top: 20px;
-  margin-top: 80px;
 }
 
 #rodar_reciclagem {
@@ -138,7 +137,7 @@ h2 {
 .tiposReciclagem.open {
   width: 100%;
   position: relative;
-  top: 8rem;
+
   height: calc(100dvh - 8rem);
   padding: 1rem;
   background-color: var(--cor-verde1);
