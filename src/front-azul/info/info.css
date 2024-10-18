@@ -1,0 +1,43 @@
+.container-titulo {
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin-top: 70px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.titulo {
+    font-family: Arial, sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-left:  350px;
+    margin-right:  350px;
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.container-mapa {
+    background-color: white;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin-top: 70px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.mapa {
+    font-family: Arial, sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-left:  550px;
+    margin-right:  550px;
+    text-align: center;
+    padding-top: 200px;
+    padding-bottom: 200x;
+    
+}
