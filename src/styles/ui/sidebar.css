@@ -26,7 +26,6 @@
 .barralateral ul li {
   padding: 15px;
   border-bottom: 1px solid var(--cor-branca);
-
   cursor: pointer;
 }
 
@@ -36,7 +35,7 @@
 
 .barralateral ul li:hover,
 .barralateral ul li a:hover {
-  background-color: var(--cor-azul2);
+  background-color: var(--cor-azul1);
 }
 
 .submenu {
@@ -52,27 +51,57 @@
   border-bottom: 1px solid var(--cor-azul2);
 }
 
-#rec_0 {
-  color: var(--cor-rec-0);
+#rec_nao-reciclavel {
+  color: var(--cor-nao-reciclavel);
+  text-shadow: 2px 2px 5px var(--cor-preta);
 }
-#rec_1 {
-  color: var(--cor-rec-1);
+#rec_papel {
+  color: var(--cor-papel);
+  text-shadow: 2px 2px 5px var(--cor-preta);
 }
-#rec_2 {
-  color: var(--cor-rec-2);
+#rec_metal {
+  color: var(--cor-metal);
+  text-shadow: 2px 2px 5px var(--cor-preta);
 }
-#rec_3 {
-  color: var(--cor-rec-3);
+#rec_vidro {
+  color: var(--cor-vidro);
+  text-shadow: 2px 2px 5px var(--cor-preta);
 }
-#rec_4 {
-  color: var(--cor-rec-4);
+#rec_organico {
+  color: var(--cor-organico);
+  text-shadow: 2px 2px 5px var(--cor-preta);
 }
-#rec_5 {
-  color: var(--cor-rec-5);
+#rec_plastico {
+  color: var(--cor-plastico);
+  text-shadow: 2px 2px 5px var(--cor-preta);
 }
-#rec_6 {
-  color: var(--cor-rec-6);
+#rec_PET {
+  color: var(--cor-rec-PET);
 }
-#rec_7 {
-  color: var(--cor-rec-7);
+#rec_PEAD {
+  color: var(--cor-rec-PEAD);
+}
+#rec_PVC{
+  color: var(--cor-rec-PVC);
+}
+#rec_PEBD{
+  color: var(--cor-rec-PEBD);
+}
+#rec_PP{
+  color: var(--cor-rec-PP);
+}
+#rec_PS{
+  color: var(--cor-rec-PS);
+}
+#rec_O
+{
+  color: var(--cor-rec-O);
+}
+#rec_pilha{
+  color: var(--cor-pilha);
+  text-shadow: 2px 2px 5px var(--cor-preta);
+}
+#rec_eletronico{
+  color: var(--cor-vidro);
+  text-shadow: 2px 2px 5px var(--cor-preta);
 }

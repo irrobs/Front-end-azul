@@ -6,19 +6,27 @@
   --color-primary-shadow: #075985;
   --color-secondary: #22c55e;
   --cor-azul: #072945;
-  --cor-azul2: #12456e;
-  --cor-verde1: #8db83d;
-  --cor-verde2: #2ec05c;
+  --cor-azul1: #075985;
+  --cor-verde: #67cd6e;
+  --cor-verde1: #4f975c;
   --cor-branca: white;
   --cor-preta: black;
-  --cor-rec-0: #434f5c;
-  --cor-rec-1: #6f9054;
-  --cor-rec-2: #596aa1;
-  --cor-rec-3: #498ca3;
-  --cor-rec-4: #9d516e;
-  --cor-rec-5: #a6484e;
-  --cor-rec-6: #ba7155;
-  --cor-rec-7: #a88c4a;
+
+  --cor-nao-reciclavel: #333333ef;
+  --cor-papel: #0044aadf;
+  --cor-metal: #ffcf06b9;
+  --cor-vidro: #008000bb;
+  --cor-organico: #552200d3;
+  --cor-plastico: #d40000ca;
+  --cor-pilha: #C6630F;
+
+  --cor-rec-PET: #6f9054;
+  --cor-rec-PEAD: #596aa1;
+  --cor-rec-PVC: #498ca3;
+  --cor-rec-PEBD: #9d516e;
+  --cor-rec-PP: #a6484e;
+  --cor-rec-PS: #ba7155;
+  --cor-rec-O: #a88c4a;
 }
 
 *,

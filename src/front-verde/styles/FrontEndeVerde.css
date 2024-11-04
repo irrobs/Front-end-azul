@@ -10,22 +10,46 @@
 }
 
 .corpo {
+  position: relative; 
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  background-image: url('/public/assets/Fundo.jpg');
 }
 
-h1 {
+.overlay {
+  position: absolute; 
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(120deg, var(--cor-verde)  0%, var(--cor-verde1) 100%);
+  opacity: 0.9;
+  filter: brightness(0.5);
+  z-index: 1; 
+}
+
+.titulo, .desc, .png, .tipos_embalagem, h2, #scroll{
+  position: relative; 
+  z-index: 1; 
+}
+
+.voltar{
+  z-index: 2; 
+}
+
+#tituloh1 {
   color: var(--cor-branca);
   padding-left: 10px;
   font-weight: 900;
-  font-size: 55px;
+  font-size: 80px;
+  margin: 0;
 }
 
 h2 {
   font-weight: 600;
-  font-size: 30px;
+  font-size: 40px;
   color: var(--cor-branca);
 }
 
@@ -41,32 +65,24 @@ h2 {
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  background: #072945;
   width: 60%;
   padding: 40px;
   margin-top: 20px;
-  border-radius: 20px;
-  box-shadow: 1px 1px 5px var(--cor-preta);
 }
 .box_imagens {
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 20%;
+
 }
 .box_imagens img {
-  height: 25vw;
+  height: 05vw;
   object-fit: cover;
   width: 25vw;
   -webkit-transition: -webkit-transform 0.5s ease;
   transition: transform 0.5s ease;
   opacity: 0.9;
-}
-
-.imagens:hover {
-  -webkit-transform: scale(1.1);
-  transform: scale(1.5);
-  opacity: 1;
 }
 
 #scroll {
@@ -81,25 +97,27 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 60%;
+  width: 100%;
 }
 
 .box_icones {
-  background: #072945;
-  border-radius: 20px;
-  width: 100%;
   padding: 40px;
   margin-top: 20px;
   margin-bottom: 20px;
   display: flex;
   flex-wrap: wrap;
-  box-shadow: 1px 1px 5px var(--cor-preta);
+  justify-content: space-between;
 }
+
 .icones {
-  flex: 1 1 25%;
+  width: 1%;
+  flex: 1 1 10%;
   -webkit-transition: -webkit-transform 0.5s ease;
   transition: transform 0.5s ease;
-  opacity: 0.8;
+  opacity: 0.9;
+  margin: 10px;
+  border-radius: 3%;
+  box-shadow: 5px 5px 10px var(--cor-preta);
 }
 
 .icones:hover {
@@ -107,6 +125,24 @@ h2 {
   transform: scale(1.1);
   opacity: 1;
 }
+
+.icones2{
+  max-width: 11%;
+  flex: 1 1 1%;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  opacity: 0.9;
+  margin: 15px;
+  border-radius: 3%;
+  box-shadow: 5px 5px 10px var(--cor-preta);
+}
+
+.icones2:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  opacity: 1;
+}
+
 
 @keyframes jumping {
   from {
@@ -129,20 +165,25 @@ h2 {
   }
 }
 
-.filter-white {
-  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(100deg)
+.filter-inverter {
+  filter: invert(0%) sepia(100%) saturate(0%) hue-rotate(100deg)
     brightness(118%) contrast(100%);
 }
 
 .tiposReciclagem.open {
   width: 100%;
+  min-height: 100vh;
   position: relative;
-
-  height: calc(100dvh - 8rem);
   padding: 1rem;
-  background-color: var(--cor-verde1);
+  background-image: url('/public/assets/Fundo.jpg');
+}
+.local_descarte_img, .local_descarte, .descrição, .box_ilustrativa, .explicação, .nome, .tipos_plastico{
+  z-index: 1;
 }
 
+.local_descarte_img img{
+  border-radius: 10%;
+}
 .voltar {
   width: 10%;
   position: absolute;
@@ -164,9 +205,11 @@ h2 {
 }
 
 .nome {
+  text-align: center;
   font-weight: 600;
-  font-size: 30px;
+  font-size: 45px;
   color: var(--cor-branca);
+  text-shadow: 1px 1px 3px var(--cor-preta);
 }
 
 .explicação {
@@ -201,7 +244,7 @@ h2 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 50%;
+  width: 60%;
 }
 .descrição {
   width: 50%;
@@ -216,58 +259,62 @@ h2 {
   font-size: 20px;
   color: var(--cor-branca);
 }
-@media screen and (max-width: 900px) {
-  h1 {
-    font-size: 33px;
-  }
-  #rodar_reciclagem {
-    max-width: 35px;
-  }
-  h2 {
-    font-size: 23px;
-  }
-  .desc {
-    font-size: 20px;
-  }
-  .box_imagens img {
-    width: 25vw;
-    height: 40vw;
-  }
-  #scroll {
-    margin-bottom: 110px;
-  }
-  .icones {
-    width: 100px;
-  }
-  .cabecalho {
-    height: 30vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-  }
-  .cabecalho h1 {
-    font-size: 30px;
-  }
-  .voltar {
-    position: relative;
-    flex-direction: row-reverse;
-    width: 30%;
-  }
-  .nome {
-    text-align: center;
-  }
-  .box_ilustrativa {
-    flex-direction: column-reverse;
-    width: 70%;
-  }
-  .descrição {
-    width: 120%;
-    margin-bottom: 30px;
-  }
+/* @media screen and (max-width: 900px) 
+{
+} */
+
+.flip-container {
+  perspective: 1000px;
 }
 
-/* muda cor do bakcground no front end verde */
-.corpo {
-  background-color: var(--cor-verde1);
+.flipper {
+  height: 25vw;
+  width: 25vw;
+  transition: transform 1.2s ease-in-out;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.front, .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--cor-branca);
+  font-size: 26px;
+  overflow: hidden;
+}
+
+.front {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0px 0px 3px var(--cor-preta)); /* Adiciona uma borda de sombra */
+}
+
+.front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.back {
+  background: none;
+  transform: rotateY(180deg);
+  filter: brightness(0.9);
+  border-radius: 15px;
+  text-shadow: 2px 2px 5px var(--cor-preta);
+}
+
+.flip-container:hover .flipper {
+  transform: rotateY(180deg);
+}
+
+.tipos_plastico{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

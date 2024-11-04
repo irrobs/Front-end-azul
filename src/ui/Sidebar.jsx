@@ -35,52 +35,52 @@ export default function Sidebar({
               <ul className="submenu">
                 <li onClick={voltarAoCorpo}>Página Inicial</li>
                 <li
-                  id="rec_0"
+                  id="rec_nao-reciclavel"
                   onClick={() => mostrarTiposReciclagem(0) + mostrarSidebar()}
                 >
-                  ♻Reciclagem de Plástico
+                  Não Reciclável
                 </li>
                 <li
-                  id="rec_1"
+                  id="rec_papel"
                   onClick={() => mostrarTiposReciclagem(1) + mostrarSidebar()}
                 >
-                  ♻1 Polietileno Tereftalato
+                  ♻ Papel
                 </li>
                 <li
-                  id="rec_2"
+                  id="rec_metal"
                   onClick={() => mostrarTiposReciclagem(2) + mostrarSidebar()}
                 >
-                  ♻2 Polietileno de Alta Densidade
+                  ♻ Metal
                 </li>
                 <li
-                  id="rec_3"
+                  id="rec_vidro"
                   onClick={() => mostrarTiposReciclagem(3) + mostrarSidebar()}
                 >
-                  ♻3 Policloreto de Vinila
+                  ♻ Vidro
                 </li>
                 <li
-                  id="rec_4"
+                  id="rec_organico"
                   onClick={() => mostrarTiposReciclagem(4) + mostrarSidebar()}
                 >
-                  ♻4 Polietileno de Baixa Densidade
+                  ♻ Orgânico
                 </li>
                 <li
-                  id="rec_5"
+                  id="rec_pilha"
                   onClick={() => mostrarTiposReciclagem(5) + mostrarSidebar()}
                 >
-                  ♻5 Polipropileno
+                  ♻ Pilha
                 </li>
                 <li
-                  id="rec_6"
+                  id="rec_eletronico"
                   onClick={() => mostrarTiposReciclagem(6) + mostrarSidebar()}
                 >
-                  ♻6 Poliestireno
+                  ♻ Lixo Eletrônico
                 </li>
                 <li
-                  id="rec_7"
+                  id="rec_plastico"
                   onClick={() => mostrarTiposReciclagem(7) + mostrarSidebar()}
                 >
-                  ♻7 Outros
+                  ♻ Plástico
                 </li>
               </ul>
             )}
