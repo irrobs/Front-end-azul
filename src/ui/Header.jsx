@@ -24,7 +24,7 @@ export default function Header({
     <header>
       <Link to="/" className="divnome">
         <img style={{ width: "50px" }} src={icon_site} />
-        <div className="nome">Nome do Site</div>
+        <div className="nome">Smartwaste</div>
       </Link>
 
       <Link to="/aprenda" className="link-aprenda">
