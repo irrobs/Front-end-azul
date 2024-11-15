@@ -18,7 +18,7 @@
   --cor-vidro: #008000bb;
   --cor-organico: #552200d3;
   --cor-plastico: #d40000ca;
-  --cor-pilha: #C6630F;
+  --cor-pilha: #c6630f;
 
   --cor-rec-PET: #6f9054;
   --cor-rec-PEAD: #596aa1;
@@ -45,6 +45,7 @@ body {
   font-family: "Roboto", sans-serif;
   overflow-x: hidden;
   color: var(--color-font);
+
   /*background-image: url(''); //Colocar o Background aqui? 
     background-size: 100%;
     background-position: right;

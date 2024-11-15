@@ -1,27 +1,16 @@
 [
   {
-    "name": "Ferro Velho",
-    "distance": 5000,
-    "rating": 4
+    "nome": "Ferro Velho",
+    "latitude": -21.9780751,
+    "longitude": -47.9257853,
+    "tipo_de_reciclagem": "metal",
+    "avaliacao": 3
   },
   {
-    "name": "Coleta Seletiva",
-    "distance": 3000,
-    "rating": 5
-  },
-  {
-    "name": "Coleta de pilhas",
-    "distance": 1200,
-    "rating": 3.2
-  },
-  {
-    "name": "Lixão",
-    "distance": 2000,
-    "rating": 4.5
-  },
-  {
-    "name": "Coleta de óleo",
-    "distance": 7000,
-    "rating": 2.5
+    "nome": "Descarte",
+    "latitude": -21.9949849,
+    "longitude": -47.893063,
+    "tipo_de_reciclagem": "plastico",
+    "avaliacao": 5
   }
 ]

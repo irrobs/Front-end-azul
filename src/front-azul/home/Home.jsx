@@ -1,20 +1,42 @@
+import { useState } from "react";
 import "./style.css";
+import fakeData from "../../fake-data.json";
+import { useNavigate } from "react-router-dom";
 
-export default function home() {
+export default function Home() {
+  const [tipoReciclagem, setTipoReciclagem] = useState("");
+  const navigate = useNavigate();
+
+  function handleSubmit(e) {
+    e.preventDefault();
+
+    if (tipoReciclagem === "") return alert("Escolha uma das opções");
+
+    const locais = fakeData.filter(
+      (data) => data.tipo_de_reciclagem === tipoReciclagem
+    );
+
+    navigate("/info", { state: { locais } });
+  }
+
   return (
-    <div className="container">
-      <div className="hemisphere north">
+    <div className="container" onSubmit={handleSubmit}>
+      <form className="hemisphere north">
         <h1>BUSCADOR DE DESCARTE</h1>
-        <div className="search-bar">
-          <input type="text" placeholder="O que você quer reciclar?" />
-          <button className="search-btn">
-            <img
-              src="https://emojitool.com/img/microsoft/windows-8.1/right-pointing-magnifying-glass-14711.png"
-              alt="Search"
-            />
-          </button>
-        </div>
-      </div>
+        <select
+          className="search-bar"
+          value={tipoReciclagem}
+          onChange={(e) => {
+            setTipoReciclagem(e.target.value);
+          }}
+        >
+          <option value="">O que você quer reciclar?</option>
+          <option value="metal">Metal</option>
+          <option value="plastico">Plástico</option>
+        </select>
+
+        <button className="button-search">Encontrar locais</button>
+      </form>
       <div className="hemisphere south">
         <div className="google-maps-info">
           <img
