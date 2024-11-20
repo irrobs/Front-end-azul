@@ -1,4 +1,5 @@
 import { useLocation } from "react-router-dom";
+import L from "leaflet";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import "./info.css";
 import "leaflet/dist/leaflet.css";
@@ -7,6 +8,15 @@ export default function Info() {
   const location = useLocation();
   const locais = location.state.locais;
   const userPosition = location.state.position;
+
+  const customIcon = new L.Icon({
+    iconUrl: "/leaflet/marker-icon.png", // Path relative to the public folder
+    shadowUrl: "/leaflet/marker-shadow.png",
+    iconSize: [25, 41], // Size of the icon
+    iconAnchor: [12, 41], // Point of the icon which will correspond to marker's location
+    popupAnchor: [1, -34], // Point from which the popup should open relative to the iconAnchor
+    shadowSize: [41, 41], // Size of the shadow
+  });
 
   function calcularDistancia(userLat, userLon, localLat, localLon) {
     const R = 6371; // Raio da Terra em km
@@ -37,12 +47,16 @@ export default function Info() {
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
-          <Marker position={[userPosition.latitude, userPosition.longitude]}>
+          <Marker
+            position={[userPosition.latitude, userPosition.longitude]}
+            icon={customIcon}
+          >
             <Popup>Você está aqui!</Popup>
           </Marker>
           {locais.map((local) => (
             <Marker
               position={[local.latitude, local.longitude]}
+              icon={customIcon}
               key={local.latitude}
             >
               <Popup>{local.nome}</Popup>
