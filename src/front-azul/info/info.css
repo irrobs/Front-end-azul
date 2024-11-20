@@ -90,3 +90,47 @@
   font-family: Arial, sans-serif;
   font-weight: bold;
 }
+
+@media (max-width: 1250px) {
+  .leaflet-container {
+    height: 500px;
+    width: 600px;
+    border-radius: 3rem;
+
+    margin-left: 4rem;
+  }
+
+  .titulo {
+    font-size: 5rem;
+  }
+
+  .custom-table th,
+  .custom-table td {
+    width: 20rem;
+    padding: 1rem;
+    text-align: center;
+    color: #333;
+    font-weight: bold;
+    /*border: 4px solid #ddd;*/
+    font-size: 1.8rem;
+    border-bottom: 0.3rem solid #ddd;
+    border-right: 0.3rem solid #ddd;
+  }
+}
+
+@media (max-width: 900px) {
+  .sub-container {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .container-mapa,
+  .leaflet-container {
+    margin: 0;
+  }
+
+  .titulo {
+    font-size: 4rem;
+  }
+}
