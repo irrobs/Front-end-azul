@@ -53,7 +53,7 @@ h1 {
   align-items: center; /* Alinha verticalmente */
   position: relative; /* Permite posicionamento absoluto dos filhos */
   margin-bottom: -25px; /* Ajusta a margem inferior */
-  width: 75rem; /* Define a largura do campo de texto */
+  width: 75vw; /* Define a largura do campo de texto */
   padding: 15px; /* Adiciona preenchimento interno */
   border-radius: 30px; /* Arredonda os cantos */
   border: none; /* Remove a borda padrão */
@@ -131,4 +131,49 @@ h1 {
   background-color: #005bb5; /* Altera a cor de fundo ao passar o mouse */
 }
 
-/* Estilo para telas com largura máxima de 768px */
+@media (max-width: 900px) {
+  .south {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 650px) {
+  .google-maps-info img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .button-container button {
+    padding: 10px 50px;
+  }
+}
+
+@media (max-width: 550px) {
+  h1 {
+    font-size: 3.6rem;
+  }
+
+  .button-search {
+    padding: 10px 50px;
+  }
+}
+
+@media (max-width: 400px) {
+  .google-maps-info {
+    padding: 0 1rem;
+  }
+
+  .google-maps-info span {
+    font-size: 1.8rem;
+  }
+
+  .google-maps-info img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .button-container button {
+    padding: 6px 30px;
+    margin-bottom: 10px;
+  }
+}
