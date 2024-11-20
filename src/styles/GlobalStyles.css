@@ -82,3 +82,15 @@ h6 {
 img {
   max-width: 100%;
 }
+
+@media (max-width: 1000px) {
+  :root {
+    font-size: 56.25%;
+  }
+}
+
+@media (max-width: 800px) {
+  :root {
+    font-size: 50%;
+  }
+}

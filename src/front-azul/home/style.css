@@ -40,7 +40,7 @@
 
 /* Estilo para o título principal */
 h1 {
-  font-size: 3rem; /* Define o tamanho da fonte */
+  font-size: 5rem; /* Define o tamanho da fonte */
   font-weight: bold; /* Define o peso da fonte como negrito */
   margin-bottom: 90px; /* Adiciona margem inferior */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Adiciona sombra ao texto */
@@ -53,7 +53,7 @@ h1 {
   align-items: center; /* Alinha verticalmente */
   position: relative; /* Permite posicionamento absoluto dos filhos */
   margin-bottom: -25px; /* Ajusta a margem inferior */
-  width: 750px; /* Define a largura do campo de texto */
+  width: 75rem; /* Define a largura do campo de texto */
   padding: 15px; /* Adiciona preenchimento interno */
   border-radius: 30px; /* Arredonda os cantos */
   border: none; /* Remove a borda padrão */
@@ -132,43 +132,3 @@ h1 {
 }
 
 /* Estilo para telas com largura máxima de 768px */
-@media (max-width: 768px) {
-  h1 {
-    font-size: 2.5rem; /* Diminui o tamanho da fonte do título */
-  }
-
-  .google-maps-info img {
-    width: 30px; /* Diminui a largura da imagem */
-    height: 30px; /* Diminui a altura da imagem */
-  }
-
-  .google-maps-info span {
-    font-size: 1rem; /* Diminui o tamanho da fonte do texto */
-  }
-
-  .button-container button {
-    font-size: 1rem; /* Diminui o tamanho da fonte do botão */
-    padding: 10px 15px; /* Ajusta o preenchimento do botão */
-  }
-}
-
-/* Estilo para telas com largura máxima de 480px */
-@media (max-width: 480px) {
-  h1 {
-    font-size: 2rem; /* Diminui ainda mais o tamanho da fonte do título */
-  }
-
-  .google-maps-info img {
-    width: 25px; /* Diminui a largura da imagem */
-    height: 25px; /* Diminui a altura da imagem */
-  }
-
-  .google-maps-info span {
-    font-size: 0.9rem; /* Diminui o tamanho da fonte do texto */
-  }
-
-  .button-container button {
-    font-size: 0.9rem; /* Diminui o tamanho da fonte do botão */
-    padding: 8px 12px; /* Ajusta o preenchimento do botão */
-  }
-}
