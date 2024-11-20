@@ -10,13 +10,30 @@ export default function Home() {
   function handleSubmit(e) {
     e.preventDefault();
 
-    if (tipoReciclagem === "") return alert("Escolha uma das opções");
+    if (tipoReciclagem === "") {
+      return alert("Escolha uma das opções");
+    }
 
     const locais = fakeData.filter(
       (data) => data.tipo_de_reciclagem === tipoReciclagem
     );
 
-    navigate("/info", { state: { locais } });
+    // Fetch the user's location
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const { latitude, longitude, accuracy } = position.coords;
+          const userPosition = { latitude, longitude };
+
+          // Navigate only after fetching the location
+          console.log(accuracy);
+          navigate("/info", { state: { locais, position: userPosition } });
+        },
+        (err) => alert(err.message)
+      );
+    } else {
+      alert("Geolocalização não é suportada no seu browser.");
+    }
   }
 
   return (

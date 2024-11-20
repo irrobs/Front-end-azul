@@ -81,27 +81,45 @@
 #rec_PEAD {
   color: var(--cor-rec-PEAD);
 }
-#rec_PVC{
+#rec_PVC {
   color: var(--cor-rec-PVC);
 }
-#rec_PEBD{
+#rec_PEBD {
   color: var(--cor-rec-PEBD);
 }
-#rec_PP{
+#rec_PP {
   color: var(--cor-rec-PP);
 }
-#rec_PS{
+#rec_PS {
   color: var(--cor-rec-PS);
 }
-#rec_O
-{
+#rec_O {
   color: var(--cor-rec-O);
 }
-#rec_pilha{
+#rec_pilha {
   color: var(--cor-pilha);
   text-shadow: 2px 2px 5px var(--cor-preta);
 }
-#rec_eletronico{
+#rec_eletronico {
   color: var(--cor-vidro);
   text-shadow: 2px 2px 5px var(--cor-preta);
+}
+
+.filter-white {
+  width: 45px;
+}
+
+@media (max-width: 800px) {
+  .barralateral {
+    width: 300px;
+    padding-top: 8px;
+  }
+
+  .barralateral ul {
+    font-size: 2.2rem;
+  }
+
+  .filter-white {
+    width: 24px;
+  }
 }

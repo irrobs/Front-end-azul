@@ -23,8 +23,8 @@ export default function Header({
   return (
     <header>
       <Link to="/" className="divnome">
-        <img style={{ width: "50px" }} src={icon_site} />
-        <div className="nome">Smartwaste</div>
+        <img src={icon_site} />
+        <div className="app-nome">Smartwaste</div>
       </Link>
 
       <Link to="/aprenda" className="link-aprenda">
@@ -34,7 +34,6 @@ export default function Header({
       <div>
         <img
           className="filter-white"
-          style={{ width: "50px" }}
           src={barra_lateral}
           onClick={mostrarSidebar}
         />

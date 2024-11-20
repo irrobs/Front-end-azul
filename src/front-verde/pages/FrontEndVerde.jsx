@@ -136,11 +136,7 @@ function FrontEndVerde() {
         <div className="corpo">
           <div className="overlay" />
           <div className="titulo">
-            <img
-              className="filter-inverter"
-              style={{ width: "70px" }}
-              src={reciclagem}
-            />
+            <img className="filter-inverter" src={reciclagem} />
             <h1 id="tituloh1">APRENDA A RECICLAR</h1>
           </div>
 
@@ -212,13 +208,12 @@ function FrontEndVerde() {
                     Voltar
                     <img
                       className="filter-white"
-                      style={{ width: "45px" }}
                       src={fecha_esquerda}
                       onClick={voltarAoCorpo}
                     />
                   </div>
                   <div className="titulo">
-                    <img style={{ width: "70px" }} src={reciclagem} />
+                    <img className="filter-inverter" src={reciclagem} />
                     <h1 id="tituloh1">APRENDA A RECICLAR</h1>
                   </div>
                 </div>
@@ -251,13 +246,12 @@ function FrontEndVerde() {
                   Voltar
                   <img
                     className="filter-white"
-                    style={{ width: "45px" }}
                     src={fecha_esquerda}
                     onClick={voltarAoCorpo}
                   />
                 </div>
                 <div className="titulo">
-                  <img style={{ width: "70px" }} src={reciclagem} />
+                  <img className="filter-inverter" src={reciclagem} />
                   <h1 id="tituloh1">APRENDA A RECICLAR</h1>
                 </div>
               </div>
@@ -293,7 +287,6 @@ function FrontEndVerde() {
                   </div>
                   <div className="local_descarte_img">
                     <img
-                      style={{ width: "300px" }}
                       src={
                         itemSelecionado > 7
                           ? tipos_de_plastico[itemSelecionado - 8]

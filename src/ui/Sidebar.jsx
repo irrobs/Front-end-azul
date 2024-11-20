@@ -20,7 +20,6 @@ export default function Sidebar({
     <aside className={`barralateral ${barraLateral ? "open" : ""}`}>
       <img
         className="filter-white"
-        style={{ width: "45px" }}
         src={fechar_barra_lateral}
         onClick={mostrarSidebar}
       />
