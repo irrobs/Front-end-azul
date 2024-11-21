@@ -257,6 +257,7 @@ h2 {
 
 .flip-container {
   perspective: 1000px;
+  margin: 0 auto;
 }
 
 .flipper {
