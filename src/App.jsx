@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import AppLayout from "./ui/AppLayout";
 import Home from "./front-azul/home/Home";
 import Info from "./front-azul/info/Info";
+
 import About from "./front-azul/about/About";
 import FrontEndVerde from "./front-verde/pages/FrontEndVerde";
 
