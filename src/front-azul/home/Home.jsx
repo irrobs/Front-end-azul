@@ -1,52 +1,49 @@
 import { useState } from "react";
 import "./style.css";
-import fakeData from "../../fake-data.json";
 import { useNavigate } from "react-router-dom";
 
 export default function Home() {
   const [tipoReciclagem, setTipoReciclagem] = useState("");
   const navigate = useNavigate();
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
-
-    fetch("https://descartebolados2.vercel.app/api/locaisDescarte")
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        return response.json(); // Parse the JSON response
-      })
-      .then((data) => {
-        console.log("Data received:", data); // Log the data
-      })
-      .catch((error) => {
-        console.error("Error fetching data:", error); // Handle any errors
-      });
 
     if (tipoReciclagem === "") {
       return alert("Escolha uma das opções");
     }
 
-    const locais = fakeData.filter(
-      (data) => data.tipo_de_reciclagem === tipoReciclagem
-    );
-
-    // Fetch the user's location
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        (position) => {
-          const { latitude, longitude, accuracy } = position.coords;
-          const userPosition = { latitude, longitude };
-
-          // Navigate only after fetching the location
-          console.log(accuracy);
-          navigate("/info", { state: { locais, position: userPosition } });
-        },
-        (err) => alert(err.message)
+    try {
+      console.log("fetching");
+      const response = await fetch(
+        "https://api-smartwaste.onrender.com/api/locaisDescarte"
       );
-    } else {
-      alert("Geolocalização não é suportada no seu browser.");
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const locais = await response.json(); // Parse the JSON response
+      /* const locais = data.filter(
+        (data) => data.tipo_de_reciclagem === tipoReciclagem
+      ); */
+
+      // Fetch the user's location
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          (position) => {
+            const { latitude, longitude } = position.coords;
+            const userPosition = { latitude, longitude };
+
+            // Navigate only after fetching the location
+            navigate("/info", { state: { locais, position: userPosition } });
+          },
+          (err) => alert(err.message)
+        );
+      } else {
+        alert("Geolocalização não é suportada no seu browser.");
+      }
+    } catch (error) {
+      console.error("Error fetching data:", error); // Handle any errors
     }
   }
 
