@@ -10,6 +10,20 @@ export default function Home() {
   function handleSubmit(e) {
     e.preventDefault();
 
+    fetch("https://descartebolados2.vercel.app/api/locaisDescarte")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json(); // Parse the JSON response
+      })
+      .then((data) => {
+        console.log("Data received:", data); // Log the data
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error); // Handle any errors
+      });
+
     if (tipoReciclagem === "") {
       return alert("Escolha uma das opções");
     }
