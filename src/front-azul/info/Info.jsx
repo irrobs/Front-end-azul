@@ -76,10 +76,6 @@ export default function Info() {
                   {" "}
                   Distância{" "}
                 </th>
-                <th title="Aqui nesta coluna está a avaliação do local de descarte!">
-                  {" "}
-                  Avaliação{" "}
-                </th>
               </tr>
             </thead>
 
@@ -97,7 +93,6 @@ export default function Info() {
                     ).toFixed(2)}{" "}
                     km{" "}
                   </td>
-                  <td> {local.avaliacao} </td>
                 </tr>
               ))}
             </tbody>
