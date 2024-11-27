@@ -14,9 +14,8 @@ export default function Home() {
     }
 
     try {
-      console.log("fetching");
       const response = await fetch(
-        "https://api-smartwaste.onrender.com/api/locaisDescarte"
+        `https://api-smartwaste.onrender.com/api/locaisDescarte/tipo/${tipoReciclagem}`
       );
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -59,8 +58,13 @@ export default function Home() {
           }}
         >
           <option value="">O que você quer reciclar?</option>
-          <option value="metal">Metal</option>
-          <option value="plastico">Plástico</option>
+          <option value="Geral">Geral</option>
+          <option value="Pilhas">Pilhas</option>
+          <option value="Agrotóxicos">Agrotóxicos</option>
+          <option value="Lâmpadas Inservíveis">Lâmpadas Inservíveis</option>
+          <option value="Pneus Inservíveis">Pneus Inservíveis</option>
+          <option value="Pilhas e Baterias">Pilhas e Baterias</option>
+          <option value="COLETA SELETIVA">COLETA SELETIVA</option>
         </select>
 
         <button className="button-search">Encontrar locais</button>

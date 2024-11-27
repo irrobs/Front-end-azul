@@ -1,16 +1,37 @@
 import { useLocation } from "react-router-dom";
 import L from "leaflet";
-import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
+import { MapContainer, Marker, TileLayer, Tooltip } from "react-leaflet";
 import "./info.css";
 import "leaflet/dist/leaflet.css";
 
 export default function Info() {
   const location = useLocation();
-  const locais = location.state.locais;
   const userPosition = location.state.position;
+
+  const locais = location.state.locais;
+  locais.forEach((local) => {
+    local.distancia = calcularDistancia(
+      userPosition.latitude,
+      userPosition.longitude,
+      local.latitude,
+      local.longitude
+    ).toFixed(2);
+  });
+
+  const locaisSorted = locais.sort((a, b) => a.distancia - b.distancia);
+  console.log(locaisSorted);
 
   const customIcon = new L.Icon({
     iconUrl: "/leaflet/marker-icon.png", // Path relative to the public folder
+    shadowUrl: "/leaflet/marker-shadow.png",
+    iconSize: [25, 41], // Size of the icon
+    iconAnchor: [12, 41], // Point of the icon which will correspond to marker's location
+    popupAnchor: [1, -34], // Point from which the popup should open relative to the iconAnchor
+    shadowSize: [41, 41], // Size of the shadow
+  });
+
+  const customUserIcon = new L.Icon({
+    iconUrl: "/leaflet/marker-icon-fotor.png", // Path relative to the public folder
     shadowUrl: "/leaflet/marker-shadow.png",
     iconSize: [25, 41], // Size of the icon
     iconAnchor: [12, 41], // Point of the icon which will correspond to marker's location
@@ -39,7 +60,7 @@ export default function Info() {
 
       <div className="sub-container">
         <MapContainer
-          center={[locais[0].latitude, locais[0].longitude]}
+          center={[locaisSorted[0].latitude, locaisSorted[0].longitude]}
           zoom={16}
           scrollWheelZoom={true}
         >
@@ -49,17 +70,21 @@ export default function Info() {
           />
           <Marker
             position={[userPosition.latitude, userPosition.longitude]}
-            icon={customIcon}
+            icon={customUserIcon}
           >
-            <Popup>Você está aqui!</Popup>
+            <Tooltip permanent>
+              <span>Você está aqui!</span>
+            </Tooltip>
           </Marker>
-          {locais.map((local) => (
+          {locaisSorted.map((local) => (
             <Marker
               position={[local.latitude, local.longitude]}
               icon={customIcon}
               key={local.latitude}
             >
-              <Popup>{local.nome}</Popup>
+              <Tooltip permanent>
+                <span>{local.nome}</span>
+              </Tooltip>
             </Marker>
           ))}
         </MapContainer>
@@ -80,18 +105,11 @@ export default function Info() {
             </thead>
 
             <tbody>
-              {locais.map((local) => (
+              {locaisSorted.map((local) => (
                 <tr key={local.latitude}>
                   <td> {local.nome} </td>
                   <td>
-                    <i className="carro"></i>{" "}
-                    {calcularDistancia(
-                      userPosition.latitude,
-                      userPosition.longitude,
-                      local.latitude,
-                      local.longitude
-                    ).toFixed(2)}{" "}
-                    km{" "}
+                    <i className="carro"></i> {local.distancia} km{" "}
                   </td>
                 </tr>
               ))}
