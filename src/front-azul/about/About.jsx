@@ -11,7 +11,7 @@ export default function About() {
       <div className="section">
         <div className="theme back-end">
           <div className="logo logo-back">
-            <img src="../../../public/assets/LogoBack.png" alt="LogoBack" />
+            <img src="/assets/LogoBack.png" alt="LogoBack" />
             <h2>Back-End</h2>
           </div>
 
@@ -27,7 +27,7 @@ export default function About() {
 
         <div className="theme front-end">
           <div className="logo logo-front">
-            <img src="../../../public/assets/LogoFront.png" alt="LogoFront" />
+            <img src="/assets/LogoFront.png" alt="LogoFront" />
             <h2>Front-End</h2>
           </div>
 

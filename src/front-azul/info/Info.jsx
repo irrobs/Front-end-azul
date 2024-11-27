@@ -1,6 +1,14 @@
+/* eslint-disable react/prop-types */
+import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import L from "leaflet";
-import { MapContainer, Marker, TileLayer, Tooltip } from "react-leaflet";
+import {
+  MapContainer,
+  Marker,
+  TileLayer,
+  Tooltip,
+  useMap,
+} from "react-leaflet";
 import "./info.css";
 import "leaflet/dist/leaflet.css";
 
@@ -54,6 +62,20 @@ export default function Info() {
     return distancia;
   }
 
+  function FitBounds({ locaisSorted, userPosition }) {
+    const map = useMap();
+
+    useEffect(() => {
+      const bounds = L.latLngBounds([
+        [userPosition.latitude, userPosition.longitude],
+        ...locaisSorted.map((local) => [local.latitude, local.longitude]),
+      ]);
+      map.fitBounds(bounds);
+    }, [map, locaisSorted, userPosition]);
+
+    return null;
+  }
+
   return (
     <div className="container">
       <div className="titulo"> LOCALIZAÇÕES PARA DESCARTE </div>
@@ -68,6 +90,7 @@ export default function Info() {
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
+          <FitBounds locaisSorted={locaisSorted} userPosition={userPosition} />
           <Marker
             position={[userPosition.latitude, userPosition.longitude]}
             icon={customUserIcon}
