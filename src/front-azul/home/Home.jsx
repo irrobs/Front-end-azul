@@ -64,7 +64,7 @@ export default function Home() {
           <option value="Lâmpadas Inservíveis">Lâmpadas Inservíveis</option>
           <option value="Pneus Inservíveis">Pneus Inservíveis</option>
           <option value="Pilhas e Baterias">Pilhas e Baterias</option>
-          <option value="COLETA SELETIVA">COLETA SELETIVA</option>
+          <option value="COLETA SELETIVA">Coleta Seletiva</option>
         </select>
 
         <button className="button-search">Encontrar locais</button>
@@ -76,9 +76,9 @@ export default function Home() {
             alt="Google Maps"
           />
           <div className="text-and-button">
-            <span>Cadastre um novo local de descarte.</span>
+            <span>Cadastre um novo local de descarte.(em breve)</span>
             <div className="button-container">
-              <button>Novo Local</button>
+              <button disabled>Novo Local</button>
             </div>
           </div>
         </div>
